@@ -1,2 +1,2 @@
 # Vers XSS
-Site vulnérable utilisé dans les articles [La Stack Smashing Protection: Un canary infaillible?](Les Vers XSS: Game of Life "DailySecurity Vers XSS")
+Site vulnérable utilisé dans l'article [La Stack Smashing Protection: Un canary infaillible?](http://www.dailysecurity.fr/les-vers-xss/ "DailySecurity Vers XSS")
