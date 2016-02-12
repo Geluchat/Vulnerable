@@ -28,7 +28,7 @@ int saisie(void)
     if( (csock = accept(ssock, (struct sockaddr *) &caddr, &clen)) < 0) {
         exit(1);
     }
-    memset(buff, '', 512);
+    memset(buff, '\0', 512);
  
     recv(csock,&buff, 512-1, 0);
     vuln(&buff);
